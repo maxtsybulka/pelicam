@@ -38,16 +38,16 @@ class Login(WebPage):
     btn_login = WebElement(xpath='//div[@class="v-card__text pa-0"]//button[@id="recaptcha-container"]')
 
     # Текст политики конф. google
-    text_privacy_policy = WebElement(xpath='//div[@class="v-card__text pa-0"]//div[@class="text-h4 text-center mt-1 mb-4 px-2"]')
+    text_privacy_policy = WebElement(xpath='//div[@class="text-h4 text-center mt-1 px-2"]')
 
     # Ссылка в тексте "Политика конфиденциальности"
-    link_privacy_policy = WebElement(xpath='//div[@class="v-card__text pa-0"]//div[@class="text-h4 text-center mt-1 mb-4 px-2"]/a[1]')
+    link_privacy_policy = WebElement(xpath='//div[@class="text-h4 text-center mt-1 px-2"]/a[1]')
 
     # Ссылка в тексте "Условия Google"
-    link_google_terms = WebElement(xpath='//div[@class="v-card__text pa-0"]//div[@class="text-h4 text-center mt-1 mb-4 px-2"]/a[2]')
+    link_google_terms = WebElement(xpath='//div[@class="text-h4 text-center mt-1 px-2"]/a[2]')
 
     # Текст "или войти через"
-    text_head_or_login = WebElement(xpath='//div[@class="v-card__text pa-0"]//div[@class="d-flex align-center mb-4"]//div[@class="text-h3 mx-2"]')
+    text_head_or_login = WebElement(xpath='//div[@class="text-h3 mx-2 color-dark--text"]')
 
     # Кнопка регистрации через google
     btn_google = WebElement(css_selector='#app > div.v-application--wrap > main > div > div > div.v-card__actions.pa-0.mb-4 > button:nth-child(1)')
@@ -56,7 +56,10 @@ class Login(WebPage):
     btn_facebook = WebElement(css_selector='#app > div.v-application--wrap > main > div > div > div.v-card__actions.pa-0.mb-4 > button:nth-child(3)')
 
     # Кнопка забыли пароль
-    btn_forgot_pass = WebElement(css_selector='#app > div.v-application--wrap > main > div > div > div.v-card__actions.pa-0.justify-space-between > div > a:nth-child(1) > button')
+    btn_forgot_pass = WebElement(css_selector='#app > div.v-application--wrap > main > div > div > div.v-card__actions.pa-0.justify-space-between > div > a:nth-child(1)')
 
     # Кнопка регистрации
-    btn_register = WebElement(css_selector='#app > div.v-application--wrap > main > div > div > div.v-card__actions.pa-0.justify-space-between > div > a:nth-child(2) > button')
+    btn_register = WebElement(css_selector='#app > div.v-application--wrap > main > div > div > div.v-card__actions.pa-0.justify-space-between > div > a:nth-child(2)')
+
+    # Кнопка регистрации
+    text_error = WebElement(xpath='//div[@class="v-input__control"]//div[@class="v-messages__message"]')
