@@ -1,4 +1,4 @@
-"""Поизитивные и негативные тесты логирования"""
+"""Поизитивные и негативные тесты хедера"""
 
 import allure
 import time
@@ -6,11 +6,10 @@ from pages.header import Header
 import pytest_check as check
 
 
-@allure.feature("Авторизация на сайте")
-@allure.story("Проверка входа в профиль")
-@allure.severity("BLOCKER")
-def test_login(web_browser):
-    """ Вход и авторизация на сайте с заполнением корректных данных. """
+@allure.feature("Хедер")
+@allure.story("Проверка элементов хедера")
+def test_header(web_browser):
+    """ Проверка наличия элементов на экране, контент и функционал хедера. """
 
     page = Header(web_browser)
 
